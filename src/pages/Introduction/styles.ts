@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import {RectButton} from 'react-native-gesture-handler';
 
 import Button from '../../components/Button';
 
@@ -8,6 +9,13 @@ export const Container = styled.View`
   align-items: center;
   justify-content: center;
   padding: 0 15px;
+`;
+
+export const Close = styled(RectButton)`
+  position: absolute;
+
+  top: 4.5px;
+  left: 15px;
 `;
 
 export const Title = styled.Text`
