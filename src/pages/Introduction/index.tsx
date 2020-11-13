@@ -1,5 +1,5 @@
 import React from 'react';
-// usar o FontAwesome de font
+import Icon from 'react-native-vector-icons/FontAwesome';
 import {Image, Text} from 'react-native';
 
 import melissaImg from '../../assets/melissa.png';
@@ -20,21 +20,24 @@ const Introduction: React.FC = () => {
       <Title>Utilze agora uma nova forma de investir em você!</Title>
 
       <ListItem>
-        <Text>✓</Text>
+        <Icon name="check-circle-o" size={24} color="#009FE3" />
+
         <TextListItem>
           Conclua seus objetivos de curto, medio e longo prazo com o Melissa
         </TextListItem>
       </ListItem>
 
       <ListItem>
-        <Text>✓</Text>
+        <Icon name="check-circle-o" size={24} color="#009FE3" />
+
         <TextListItem>
           Receba beneficios ao finalizar suas metas antes do tempo previsto
         </TextListItem>
       </ListItem>
 
       <ListItem>
-        <Text>✓</Text>
+        <Icon name="check-circle-o" size={24} color="#009FE3" />
+
         <TextListItem>
           Nossa assistente vai te auxiliar do começo até o final do seu objetivo
         </TextListItem>
@@ -43,7 +46,8 @@ const Introduction: React.FC = () => {
       <ButtonConfirm
         onPress={() => {
           console.log('UwU');
-        }}>
+        }}
+      >
         Entendi
       </ButtonConfirm>
     </Container>
