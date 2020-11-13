@@ -13,8 +13,8 @@ const Routes: React.FC = () => (
       cardStyle: {backgroundColor: '#009FE3'},
       // eslint-disable-next-line react/jsx-closing-bracket-location
     }}>
-    <Meli.Screen name="Introduction" component={Introduction} />
     <Meli.Screen name="Home" component={Home} />
+    <Meli.Screen name="Introduction" component={Introduction} />
   </Meli.Navigator>
 );
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {Image, Text} from 'react-native';
+import {Image} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 import melissaImg from '../../assets/melissa.png';
 
@@ -13,6 +14,8 @@ import {
 } from './styles';
 
 const Introduction: React.FC = () => {
+  const navigation = useNavigation();
+
   return (
     <Container>
       <Image source={melissaImg} />
@@ -43,11 +46,7 @@ const Introduction: React.FC = () => {
         </TextListItem>
       </ListItem>
 
-      <ButtonConfirm
-        onPress={() => {
-          console.log('UwU');
-        }}
-      >
+      <ButtonConfirm onPress={() => navigation.navigate('Home')}>
         Entendi
       </ButtonConfirm>
     </Container>
