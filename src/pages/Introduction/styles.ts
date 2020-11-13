@@ -11,10 +11,10 @@ export const Container = styled.View`
 `;
 
 export const Title = styled.Text`
-  font-size: 24px;
+  font-size: 28px;
   color: #000;
   text-align: center;
-  /* font-family: 'RobotoSlab-Medium'; */
+  font-family: 'ProximaNova-Bold';
   margin: 3px 0 25px;
 `;
 
@@ -27,9 +27,10 @@ export const ListItem = styled.View`
 
 export const TextListItem = styled.Text`
   margin-left: 11px;
-  font-size: 16px;
+  font-size: 18px;
+  font-family: 'ProximaNova-Regular';
 `;
 
 export const ButtonConfirm = styled(Button)`
-  margin-top: 110px;
+  margin-top: 100px;
 `;
