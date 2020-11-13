@@ -40,7 +40,12 @@ const Introduction: React.FC = () => {
         </TextListItem>
       </ListItem>
 
-      <ButtonConfirm>Entendi</ButtonConfirm>
+      <ButtonConfirm
+        onPress={() => {
+          console.log('UwU');
+        }}>
+        Entendi
+      </ButtonConfirm>
     </Container>
   );
 };
