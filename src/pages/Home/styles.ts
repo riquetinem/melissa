@@ -3,7 +3,7 @@ import {RectButton} from 'react-native-gesture-handler';
 
 export const Container = styled.View`
   flex: 1;
-  background-color: #fff;
+  background-color: #e5e5e5;
 `;
 
 export const Header = styled.View`
