@@ -5,6 +5,7 @@ export const Message = styled.View`
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  margin-top: 30px;
 `;
 
 export const TextMessage = styled.Text`
@@ -13,7 +14,7 @@ export const TextMessage = styled.Text`
   width: 300px;
   font-family: 'ProximaNova-Regular';
   padding: 15px;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(69, 194, 230, 0.3);
   border-radius: 10px;
 `;
 
