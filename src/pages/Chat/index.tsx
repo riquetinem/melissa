@@ -1,4 +1,4 @@
-import React, {useState, useCallback, ChangeEvent, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {StatusBar} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -26,10 +26,10 @@ const Chat: React.FC = () => {
   const [newMessage, setNewMessage] = useState<string>('');
   const [messages, setMessages] = useState<MessageText[]>([]);
 
-  const handleMessage = async (text: string) => {
-    const id = messages.length+1;
-    await setMessages([...messages, {id,text}])
-  }
+  const handleMessage = async (text: string): Promise<void> => {
+    const id = messages.length + 1;
+    await setMessages([...messages, {id, text}]);
+  };
 
   useEffect(() => {
     setNewMessage('');
@@ -50,19 +50,20 @@ const Chat: React.FC = () => {
             Olá, eu sou a Melissa sua assistente virtual, vamos nos conhecer
             melhor?
           </MessageMelissa>
-          {!!messages && messages.map((message) => (
-              <MessageUser key={message.id}>
-                {message.text}
-              </MessageUser>
-              )
-          )}
+          {!!messages &&
+            messages.map((message) => (
+              <MessageUser key={message.id}>{message.text}</MessageUser>
+            ))}
         </Messages>
         <InputGroup>
-          <InputText onChangeText={(text) => {
-            setNewMessage(text);
-           }} value={newMessage} />
+          <InputText
+            onChangeText={(text) => {
+              setNewMessage(text);
+            }}
+            value={newMessage}
+          />
           <Send onPress={() => handleMessage(newMessage)}>
-            <Icon name="chevron-circle-right" size={24} color="#fff" />
+            <Icon name="chevron-right" size={24} color="#fff" />
           </Send>
         </InputGroup>
       </Content>
