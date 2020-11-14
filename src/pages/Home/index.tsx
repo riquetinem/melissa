@@ -1,5 +1,6 @@
 import React from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 import {useNavigation} from '@react-navigation/native';
 
 import {
@@ -40,7 +41,7 @@ const Home: React.FC = () => {
             <Level>Nível 6 - Mercado Pontos</Level>
           </Welcome>
 
-          <Icon name="bell-o" size={24} color="#fff" />
+          <IconFontAwesome name="bell-o" size={24} color="#fff" />
         </Info>
 
         <Cash>
@@ -77,7 +78,7 @@ const Home: React.FC = () => {
         <Option>
           <ButtonOption>
             <Button>
-              <Icon name="chevron-up" size={30} color="#fff" />
+              <Icon name="qrcode" size={30} color="#fff" />
             </Button>
             <TextButton>Código QR</TextButton>
           </ButtonOption>
@@ -86,7 +87,7 @@ const Home: React.FC = () => {
         <Option>
           <ButtonOption>
             <Button>
-              <Icon name="chevron-up" size={30} color="#fff" />
+              <Icon name="money-bill-wave" size={30} color="#fff" />
             </Button>
             <TextButton>Adicionar dinheiro</TextButton>
           </ButtonOption>
@@ -95,7 +96,7 @@ const Home: React.FC = () => {
         <Option>
           <ButtonOption>
             <Button onPress={() => navigation.navigate('Introduction')}>
-              <Icon name="child" size={30} color="#fff" />
+              <Icon name="comments-dollar" size={30} color="#fff" />
             </Button>
             <TextButton>Assistente Virtual</TextButton>
           </ButtonOption>
@@ -104,7 +105,7 @@ const Home: React.FC = () => {
         <Option>
           <ButtonOption>
             <Button>
-              <Icon name="chevron-up" size={30} color="#fff" />
+              <Icon name="hand-holding-usd" size={30} color="#fff" />
             </Button>
             <TextButton>Transferir dinheiro</TextButton>
           </ButtonOption>
