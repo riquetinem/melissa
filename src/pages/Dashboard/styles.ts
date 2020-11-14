@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import {RectButton} from 'react-native-gesture-handler';
 
 export const Navbar = styled.View`
   padding: 10px;
@@ -68,5 +69,33 @@ export const Graphic = styled.View`
   border-radius: 5px;
   elevation: 7;
 
-  height: 250px;
+  height: 440px;
+  padding: 20px;
+`;
+
+export const TitleObjective = styled.Text`
+  font-family: 'ProximaNova-Regular';
+  font-size: 18px;
+`;
+
+export const ValueObjective = styled.Text`
+  font-family: 'ProximaNova-Bold';
+  font-size: 24px;
+`;
+
+export const Line = styled.View`
+  border: 1px solid #e2e4e7;
+  margin: 16px -20px;
+`;
+
+export const ViewDetailsBox = styled(RectButton)`
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const TextViewDetails = styled.Text`
+  font-size: 14px;
+  font-family: 'ProximaNova-Bold';
+  color: #009fe3;
 `;
