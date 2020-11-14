@@ -104,7 +104,7 @@ const Home: React.FC = () => {
 
         <Option>
           <ButtonOption>
-            <Button>
+            <Button onPress={() => navigation.navigate('Chat')}>
               <Icon name="hand-holding-usd" size={30} color="#fff" />
             </Button>
             <TextButton>Transferir dinheiro</TextButton>
