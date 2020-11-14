@@ -25,8 +25,7 @@ const Introduction: React.FC = () => {
         <Close
           onPress={() => {
             navigation.navigate('Home');
-          }}
-        >
+          }}>
           <Icon name="close" size={30} color="#009FE3" />
         </Close>
 
@@ -59,7 +58,7 @@ const Introduction: React.FC = () => {
           </TextListItem>
         </ListItem>
 
-        <ButtonConfirm onPress={() => navigation.navigate('Home')}>
+        <ButtonConfirm onPress={() => navigation.navigate('Chat')}>
           Entendi
         </ButtonConfirm>
       </Container>

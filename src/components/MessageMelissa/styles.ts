@@ -20,7 +20,7 @@ export const TextMessage = styled.Text`
 export const AvatarImage = styled.View`
   width: 55px;
   height: 55px;
-  border-radius: 50;
+  border-radius: 27.5px;
   background-color: #fff;
   border-color: #000;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
