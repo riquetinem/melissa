@@ -3,7 +3,7 @@ import React from 'react';
 import {TextMessage, Message, AvatarImage} from './styles';
 
 interface MessageProps {
-  chieldren: string;
+  children: string;
 }
 
 const MessageMelissa: React.FC<MessageProps> = ({children}) => {
