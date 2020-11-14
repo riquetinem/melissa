@@ -38,6 +38,9 @@ export const InputGroup = styled.View`
   flex-direction: row;
   align-items: center;
 
+  position: absolute;
+  bottom: 0;
+
   width: 500px;
 `;
 

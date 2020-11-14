@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
+import {ScrollView} from 'react-native-gesture-handler';
 import {StatusBar} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -25,6 +26,9 @@ interface MessageText {
 const Chat: React.FC = () => {
   const [newMessage, setNewMessage] = useState<string>('');
   const [messages, setMessages] = useState<MessageText[]>([]);
+  const [count, setCount] = useState<number>(0);
+
+  const messagesMelissaTxt = ['', 'Alllll', 'HEEEEEY'];
 
   const handleMessage = async (text: string): Promise<void> => {
     const id = messages.length + 1;
@@ -33,7 +37,12 @@ const Chat: React.FC = () => {
 
   useEffect(() => {
     setNewMessage('');
+    setCount(count + 1);
   }, [messages]);
+
+  useEffect(() => {
+    console.log(messagesMelissaTxt[count]);
+  }, [count]);
 
   return (
     <>
@@ -45,16 +54,22 @@ const Chat: React.FC = () => {
         </Title>
       </Navbar>
       <Content>
-        <Messages>
-          <MessageMelissa>
-            Olá, eu sou a Melissa sua assistente virtual, vamos nos conhecer
-            melhor?
-          </MessageMelissa>
-          {!!messages &&
-            messages.map((message) => (
-              <MessageUser key={message.id}>{message.text}</MessageUser>
-            ))}
-        </Messages>
+        <ScrollView>
+          <Messages>
+            <MessageMelissa>
+              Olá, eu sou a Melissa sua assistente virtual, vamos nos conhecer
+              melhor?
+            </MessageMelissa>
+            {!!messages &&
+              messages.map((message) => (
+                <MessageUser key={message.id}>{message.text}</MessageUser>
+              ))}
+
+              { messagesMelissaTxt[count] != '' && (
+                  <MessageMelissa key={count}>{messagesMelissaTxt[count]}</MessageMelissa>
+                )}
+          </Messages>
+        </ScrollView>
         <InputGroup>
           <InputText
             onChangeText={(text) => {
