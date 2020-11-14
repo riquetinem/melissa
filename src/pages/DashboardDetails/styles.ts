@@ -27,44 +27,7 @@ export const Container = styled.View`
   padding: 25px 15px;
 `;
 
-export const FilterBox = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background: #fff;
-  border-radius: 5px;
-
-  elevation: 7;
-`;
-
-export const Filter = styled.View`
-  flex-direction: row;
-`;
-
-export const FilterText = styled.View`
-  flex-direction: column;
-  margin-left: 15px;
-`;
-
-export const FilterTextMonth = styled.Text`
-  font-family: 'ProximaNova-Regular';
-  font-size: 10px;
-`;
-
-export const FilterTextDetails = styled.Text`
-  font-family: 'ProximaNova-Regular';
-  font-size: 10px;
-`;
-
-export const Modify = styled.Text`
-  font-family: 'ProximaNova-Bold';
-  font-size: 10px;
-  color: #009fe3;
-`;
-
-export const Graphic = styled(RectButton)`
-  margin-top: 25px;
+export const Graphic = styled.View`
   background: #fff;
   border-radius: 5px;
   elevation: 7;
@@ -80,6 +43,44 @@ export const TitleObjective = styled.Text`
 export const ValueObjective = styled.Text`
   font-family: 'ProximaNova-Bold';
   font-size: 24px;
+`;
+
+export const Contribution = styled.View`
+  margin-top: 25px;
+  background: #fff;
+  border-radius: 5px;
+  elevation: 7;
+
+  padding: 20px;
+`;
+
+export const TitleContribution = styled.Text`
+  font-size: 18px;
+`;
+
+export const Table = styled.View``;
+
+export const Row = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const TableTitle = styled.Text`
+  color: #5a5a5a;
+  font-size: 14px;
+  margin: 15px 0;
+`;
+
+export const TableColumnData = styled.Text`
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 7px;
+`;
+
+export const TableColumnValue = styled.Text`
+  color: #27b7ed;
+  font-size: 14px;
+  font-family: 'ProximaNova-Bold';
 `;
 
 export const Line = styled.View`

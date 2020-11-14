@@ -69,6 +69,7 @@ export const Graphic = styled(RectButton)`
   border-radius: 5px;
   elevation: 7;
 
+  height: 440px;
   padding: 20px;
 `;
 

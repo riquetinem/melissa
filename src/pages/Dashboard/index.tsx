@@ -44,7 +44,7 @@ const dataCarro = [
   {x: 'dez', y: 2200},
 ];
 
-const Chat: React.FC = () => {
+const Dashboard: React.FC = () => {
   const navigation = useNavigation();
 
   return (
@@ -76,7 +76,16 @@ const Chat: React.FC = () => {
             <Modify>Modificar</Modify>
           </FilterBox>
 
-          <Graphic>
+          <Graphic
+            onPress={
+              () =>
+                navigation.navigate('DashboardDetails', {
+                  type: 'casa',
+                  data: dataCasa,
+                })
+              // eslint-disable-next-line react/jsx-curly-newline
+              // eslint-disable-next-line react/jsx-closing-bracket-location
+            }>
             <TitleObjective>Casa Própria em 2040</TitleObjective>
             <ValueObjective>R$ 300.000,00</ValueObjective>
             <VictoryChart width={350} theme={VictoryTheme.grayscale}>
@@ -96,7 +105,16 @@ const Chat: React.FC = () => {
             </ViewDetailsBox>
           </Graphic>
 
-          <Graphic>
+          <Graphic
+            onPress={
+              () =>
+                navigation.navigate('DashboardDetails', {
+                  type: 'carro',
+                  data: dataCarro,
+                })
+              // eslint-disable-next-line react/jsx-curly-newline
+              // eslint-disable-next-line react/jsx-closing-bracket-location
+            }>
             <TitleObjective>Carro novo em 2025</TitleObjective>
             <ValueObjective>R$ 40.000,00</ValueObjective>
             <VictoryChart width={350} theme={VictoryTheme.grayscale}>
@@ -121,4 +139,4 @@ const Chat: React.FC = () => {
   );
 };
 
-export default Chat;
+export default Dashboard;

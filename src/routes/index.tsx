@@ -5,6 +5,7 @@ import Home from '../pages/Home';
 import Introduction from '../pages/Introduction';
 import Chat from '../pages/Chat';
 import Dashboard from '../pages/Dashboard';
+import DashboardDetails from '../pages/DashboardDetails';
 
 const Meli = createStackNavigator();
 
@@ -19,6 +20,7 @@ const Routes: React.FC = () => (
     <Meli.Screen name="Introduction" component={Introduction} />
     <Meli.Screen name="Chat" component={Chat} />
     <Meli.Screen name="Dashboard" component={Dashboard} />
+    <Meli.Screen name="DashboardDetails" component={DashboardDetails} />
   </Meli.Navigator>
 );
 
