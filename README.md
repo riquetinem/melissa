@@ -11,7 +11,7 @@
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/riquetinem/melissa>
+$ git clone https://github.com/riquetinem/melissa
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd melissa
@@ -19,15 +19,13 @@ $ cd melissa
 # Vá para a pasta server
 $ npm install
 
-<p align="justify">Ou</p>
-
+# Ou
 $ yarn install
 
 # Execute a aplicação
 $ yarn android
 
-<p align="justify">Se você estiver no Mac: </p>
-
+# Se você estiver no Mac
 $ yarn ios
 
 ```
