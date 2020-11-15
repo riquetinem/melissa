@@ -24,13 +24,13 @@ import {
 } from './styles';
 
 const dataCasa = [
-  {x: 'jun', y: 0},
-  {x: 'jul', y: 650},
-  {x: 'ago', y: 1250},
-  {x: 'set', y: 1000},
-  {x: 'out', y: 1300},
-  {x: 'nov', y: 1450},
-  {x: 'dez', y: 2100},
+  {x: 'nov', y: 0},
+  {x: 'dez', y: 650},
+  {x: 'jan', y: 1250},
+  {x: 'fev', y: 1000},
+  {x: 'mar', y: 1300},
+  {x: 'abr', y: 1450},
+  {x: 'maio', y: 2100},
 ];
 
 const dataCarro = [
@@ -44,8 +44,9 @@ const dataCarro = [
   {x: 'dez', y: 2200},
 ];
 
-const Dashboard: React.FC = () => {
+const Dashboard: React.FC = ({route}: any) => {
   const navigation = useNavigation();
+  const {homePage} = route.params;
 
   return (
     <>
@@ -76,34 +77,36 @@ const Dashboard: React.FC = () => {
             <Modify>Modificar</Modify>
           </FilterBox>
 
-          <Graphic
-            onPress={
-              () =>
-                navigation.navigate('DashboardDetails', {
-                  type: 'casa',
-                  data: dataCasa,
-                })
-              // eslint-disable-next-line react/jsx-curly-newline
-              // eslint-disable-next-line react/jsx-closing-bracket-location
-            }>
-            <TitleObjective>Casa Própria em 2040</TitleObjective>
-            <ValueObjective>R$ 300.000,00</ValueObjective>
-            <VictoryChart width={350} theme={VictoryTheme.grayscale}>
-              <VictoryLine
-                data={dataCasa}
-                x="x"
-                y="y"
-                interpolation="catmullRom"
-              />
-            </VictoryChart>
+          {!homePage && (
+            <Graphic
+              onPress={
+                () =>
+                  navigation.navigate('DashboardDetails', {
+                    type: 'casa',
+                    data: dataCasa,
+                  })
+                // eslint-disable-next-line react/jsx-curly-newline
+                // eslint-disable-next-line react/jsx-closing-bracket-location
+              }>
+              <TitleObjective>Casa Própria em 2040</TitleObjective>
+              <ValueObjective>R$ 300.000,00</ValueObjective>
+              <VictoryChart width={350} theme={VictoryTheme.grayscale}>
+                <VictoryLine
+                  data={dataCasa}
+                  x="x"
+                  y="y"
+                  interpolation="catmullRom"
+                />
+              </VictoryChart>
 
-            <Line />
+              <Line />
 
-            <ViewDetailsBox>
-              <TextViewDetails>Ver detalhes</TextViewDetails>
-              <Icon name="chevron-right" size={10} color="#009FE3" />
-            </ViewDetailsBox>
-          </Graphic>
+              <ViewDetailsBox>
+                <TextViewDetails>Ver detalhes</TextViewDetails>
+                <Icon name="chevron-right" size={10} color="#009FE3" />
+              </ViewDetailsBox>
+            </Graphic>
+          )}
 
           <Graphic
             onPress={

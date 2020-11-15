@@ -5,7 +5,7 @@ export const Message = styled.View`
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin-top: 30px;
+  margin-bottom: 10px;
 `;
 
 export const TextMessage = styled.Text`

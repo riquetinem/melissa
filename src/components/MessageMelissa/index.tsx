@@ -3,14 +3,15 @@ import React from 'react';
 import {TextMessage, Message, AvatarImage} from './styles';
 
 interface MessageProps {
+  isClickable: boolean;
   children: string;
 }
 
-const MessageMelissa: React.FC<MessageProps> = ({children}) => {
+const MessageMelissa: React.FC<MessageProps> = ({isClickable, children}) => {
   return (
     <Message>
       <AvatarImage />
-      <TextMessage> {children} </TextMessage>
+      <TextMessage isClickable={isClickable}> {children} </TextMessage>
     </Message>
   );
 };

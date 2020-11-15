@@ -13,6 +13,7 @@ import {
   Title,
   Content,
   Messages,
+  ClickOnMessageMelissa,
   InputText,
   InputGroup,
   Send,
@@ -24,11 +25,12 @@ interface MessageText {
 }
 
 const Chat: React.FC = () => {
+  const navigation = useNavigation();
+
   const [newMessage, setNewMessage] = useState<string>('');
   const [messages, setMessages] = useState<MessageText[]>([]);
-  const [count, setCount] = useState<number>(0);
-
-  const messagesMelissaTxt = ['', 'Alllll', 'HEEEEEY'];
+  const [count, setCount] = useState<number>(-1);
+  const [showMessage, setShowMessage] = useState<boolean>(false);
 
   const handleMessage = async (text: string): Promise<void> => {
     const id = messages.length + 1;
@@ -41,7 +43,11 @@ const Chat: React.FC = () => {
   }, [messages]);
 
   useEffect(() => {
-    console.log(messagesMelissaTxt[count]);
+    if (count > 0) {
+      setTimeout(() => {
+        setShowMessage(true);
+      }, 3000);
+    }
   }, [count]);
 
   return (
@@ -56,18 +62,46 @@ const Chat: React.FC = () => {
       <Content>
         <ScrollView>
           <Messages>
-            <MessageMelissa>
+            <MessageMelissa isClickable={false}>
               Olá, eu sou a Melissa sua assistente virtual, vamos nos conhecer
               melhor?
             </MessageMelissa>
+
+            <MessageMelissa isClickable={false}>
+              Qual é o seu próximo objetivo?
+            </MessageMelissa>
+
             {!!messages &&
               messages.map((message) => (
                 <MessageUser key={message.id}>{message.text}</MessageUser>
               ))}
 
-              { messagesMelissaTxt[count] != '' && (
-                  <MessageMelissa key={count}>{messagesMelissaTxt[count]}</MessageMelissa>
+            {count > 0 && (
+              <>
+                <MessageMelissa isClickable={false}>
+                  Tudo bem, aguarde um momento, estou fazendo uma predição de
+                  quando voce ira atingir o seu objetivo
+                </MessageMelissa>
+
+                {showMessage ? (
+                  <ClickOnMessageMelissa
+                    // eslint-disable-next-line prettier/prettier
+                    onPress={() => navigation.navigate('Dashboard', {
+                        homePage: false,
+                        // eslint-disable-next-line prettier/prettier
+                      })}
+                    // eslint-disable-next-line prettier/prettier
+                  >
+                    <MessageMelissa isClickable>
+                      Tudo certo, voce esta a um passo mais perto de atingir
+                      seus objetivos. Toque aqui para prosseguir.
+                    </MessageMelissa>
+                  </ClickOnMessageMelissa>
+                ) : (
+                  <MessageMelissa isClickable={false}>...</MessageMelissa>
                 )}
+              </>
+            )}
           </Messages>
         </ScrollView>
         <InputGroup>

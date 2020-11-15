@@ -34,6 +34,10 @@ export const Messages = styled.View`
   margin: 25px 5px;
 `;
 
+export const ClickOnMessageMelissa = styled(RectButton)`
+  width: 100%;
+`;
+
 export const InputGroup = styled.View`
   flex-direction: row;
   align-items: center;
