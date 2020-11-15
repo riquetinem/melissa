@@ -1,6 +1,10 @@
-![Image Melissa](https://ibb.co/sRXYCmG)
-
 ## Melissa
+
+<p align="center">
+  <img src="https://i.imgur.com/CyYeeKR.png">
+</p>
+
+##
 
 <p align="justify">61 milhões de brasileiros com o nome negativado no Serviço de Proteção ao Crédito (SPC). Segundo os dados a falta de conhecimento não é o que impede o brasileiro de colocar a vida financeira em ordem.E sim:</p>
  <p align="justify">Disciplina para registrar os ganhos e gastos (26,3%), e falta de tempo (8,2%) *Dados SPC/CNDL,2020</p>
