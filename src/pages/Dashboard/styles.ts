@@ -10,6 +10,8 @@ export const Navbar = styled.View`
   justify-content: space-between;
 `;
 
+export const BackButton = styled(RectButton)``;
+
 export const MessageTitle = styled.Text`
   font-size: 24px;
   color: #fff;

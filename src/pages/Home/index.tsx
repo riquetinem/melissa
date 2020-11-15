@@ -2,6 +2,7 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 import {useNavigation} from '@react-navigation/native';
+import {ScrollView} from 'react-native';
 
 import {
   Container,
@@ -27,6 +28,13 @@ import {
   ButtonOption,
   Button,
   TextButton,
+  YourObjectives,
+  TitleYourObjectives,
+  LineYourObjectives,
+  TitleObjective,
+  ValueObjective,
+  ViewDetailsBox,
+  TextViewDetails,
 } from './styles';
 
 const Home: React.FC = () => {
@@ -87,7 +95,7 @@ const Home: React.FC = () => {
         <Option>
           <ButtonOption>
             <Button>
-              <Icon name="money-bill-wave" size={30} color="#fff" />
+              <Icon name="piggy-bank" size={30} color="#fff" />
             </Button>
             <TextButton>Adicionar dinheiro</TextButton>
           </ButtonOption>
@@ -114,12 +122,29 @@ const Home: React.FC = () => {
         <Option>
           <ButtonOption>
             <Button>
-              <Icon name="chevron-up" size={30} color="#fff" />
+              <Icon name="money-bill-wave-alt" size={30} color="#fff" />
             </Button>
             <TextButton>Sacar dinheiro</TextButton>
           </ButtonOption>
         </Option>
       </LineWithButtonsOptions>
+      <YourObjectives
+        // eslint-disable-next-line prettier/prettier
+        onPress={() => navigation.navigate('Dashboard', {homePage: true})}
+      >
+        <TitleYourObjectives>Seus objetivos</TitleYourObjectives>
+        <LineYourObjectives />
+
+        <TitleObjective>Carro Novo</TitleObjective>
+        <ValueObjective>R$ 14.520,00</ValueObjective>
+
+        <LineYourObjectives />
+
+        <ViewDetailsBox>
+          <TextViewDetails>Ver detalhes</TextViewDetails>
+          <Icon name="chevron-right" size={10} color="#009FE3" />
+        </ViewDetailsBox>
+      </YourObjectives>
     </Container>
   );
 };

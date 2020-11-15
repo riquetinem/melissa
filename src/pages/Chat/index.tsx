@@ -9,11 +9,13 @@ import MessageUser from '../../components/MessageUser';
 
 import {
   Navbar,
+  BackButton,
   MessageTitle,
   Title,
   Content,
   Messages,
   ClickOnMessageMelissa,
+  SpanText,
   InputText,
   InputGroup,
   Send,
@@ -54,9 +56,11 @@ const Chat: React.FC = () => {
     <>
       <StatusBar barStyle="dark-content" backgroundColor="#009FE3" />
       <Navbar>
-        <Icon name="bars" size={24} color="#FFF" />
+        <BackButton onPress={() => navigation.navigate('Home')}>
+          <Icon name="chevron-left" size={24} color="#FFF" />
+        </BackButton>
         <Title>
-          <MessageTitle>Converse com Melissa</MessageTitle>
+          <MessageTitle>Converse com a Melissa</MessageTitle>
         </Title>
       </Navbar>
       <Content>
@@ -94,7 +98,8 @@ const Chat: React.FC = () => {
                   >
                     <MessageMelissa isClickable>
                       Tudo certo, voce esta a um passo mais perto de atingir
-                      seus objetivos. Toque aqui para prosseguir.
+                      seus objetivos.{'\n'} {'\n'}
+                      <SpanText>Toque aqui para prosseguir.</SpanText>
                     </MessageMelissa>
                   </ClickOnMessageMelissa>
                 ) : (

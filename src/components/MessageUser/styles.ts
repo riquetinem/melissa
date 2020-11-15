@@ -14,15 +14,12 @@ export const TextMessage = styled.Text`
   width: 300px;
   font-family: 'ProximaNova-Regular';
   padding: 15px;
-  background-color: rgba(69, 194, 230, 0.3);
+  background-color: #fff;
   border-radius: 10px;
 `;
 
-export const AvatarImage = styled.View`
-  width: 55px;
-  height: 55px;
-  border-radius: 27.5px;
-  background-color: #fff;
-  border-color: #000;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+export const AvatarImage = styled.Image`
+  width: 75px;
+  height: 75px;
+  border-radius: 32.5px;
 `;

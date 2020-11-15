@@ -10,6 +10,8 @@ export const Navbar = styled.View`
   justify-content: space-between;
 `;
 
+export const BackButton = styled(RectButton)``;
+
 export const MessageTitle = styled.Text`
   font-size: 24px;
   color: #fff;
@@ -38,6 +40,11 @@ export const ClickOnMessageMelissa = styled(RectButton)`
   width: 100%;
 `;
 
+export const SpanText = styled.Text`
+  text-decoration-line: underline;
+  font-family: 'ProximaNova-Bold';
+`;
+
 export const InputGroup = styled.View`
   flex-direction: row;
   align-items: center;
@@ -55,7 +62,7 @@ export const InputText = styled.TextInput`
   elevation: 5;
 
   padding: 5px 20px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   margin-left: 5px;
 
   max-width: 330px;
@@ -64,14 +71,14 @@ export const InputText = styled.TextInput`
 `;
 
 export const Send = styled(RectButton)`
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
 
   align-items: center;
   justify-content: center;
 
   margin-left: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 
   border-radius: 22.5px;
 

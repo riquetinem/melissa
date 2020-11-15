@@ -6,6 +6,7 @@ import {VictoryLine, VictoryChart, VictoryTheme} from 'victory-native';
 
 import {
   Navbar,
+  BackButton,
   MessageTitle,
   Title,
   Container,
@@ -52,13 +53,15 @@ const Dashboard: React.FC = ({route}: any) => {
     <>
       <StatusBar barStyle="dark-content" backgroundColor="#009FE3" />
       <Navbar>
-        <Icon name="bars" size={24} color="#FFF" />
+        <BackButton onPress={() => navigation.goBack()}>
+          <Icon name="chevron-left" size={24} color="#FFF" />
+        </BackButton>
         <Title>
           <MessageTitle>Gestão de Objetivos</MessageTitle>
         </Title>
       </Navbar>
-      <ScrollView>
-        <Container>
+      <Container>
+        <ScrollView>
           <FilterBox>
             <Filter>
               <Icon name="sliders-h" size={24} color="#5A5A5A" />
@@ -136,8 +139,8 @@ const Dashboard: React.FC = ({route}: any) => {
               <Icon name="chevron-right" size={10} color="#009FE3" />
             </ViewDetailsBox>
           </Graphic>
-        </Container>
-      </ScrollView>
+        </ScrollView>
+      </Container>
     </>
   );
 };

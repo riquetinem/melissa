@@ -20,15 +20,13 @@ export const TextMessage = styled.Text<TextMessageProps>`
   font-family: 'ProximaNova-Regular';
   padding: 15px;
   background-color: ${(props) =>
-    props.isClickable ? 'rgba(56, 199, 75, 0.3)' : 'rgba(0, 0, 0, 0.15)'};
+    props.isClickable ? 'rgba(56, 199, 75, 1)' : 'rgba(0, 159, 227, 1)'};
+  color: #fff;
   border-radius: 10px;
 `;
 
-export const AvatarImage = styled.View`
-  width: 55px;
-  height: 55px;
-  border-radius: 27.5px;
-  background-color: #fff;
-  border-color: #000;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+export const AvatarImage = styled.Image`
+  width: 65px;
+  height: 65px;
+  border-radius: 32.5px;
 `;
