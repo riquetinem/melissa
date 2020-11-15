@@ -27,16 +27,16 @@ import {
 const dataCasa = [
   {x: 'nov', y: 0},
   {x: 'dez', y: 650},
-  {x: 'jan', y: 1250},
-  {x: 'fev', y: 1000},
-  {x: 'mar', y: 1300},
-  {x: 'abr', y: 1450},
-  {x: 'maio', y: 2100},
+  {x: 'jan', y: 600},
+  {x: 'fev', y: 1200},
+  {x: 'mar', y: 1500},
+  {x: 'abr', y: 1300},
+  {x: 'maio', y: 2300},
 ];
 
 const dataCarro = [
   {x: 'mai', y: 0},
-  {x: 'jun', y: 400},
+  {x: 'jun', y: 500},
   {x: 'jul', y: 300},
   {x: 'ago', y: 900},
   {x: 'set', y: 850},
