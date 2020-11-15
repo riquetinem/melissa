@@ -1,10 +1,11 @@
-![Imagem Melissa](scr/assets/avatar-melissa.png)
-## image melissa
+### image melissa
 
-# Melissa
+## Melissa
 
-## 61 milhões de brasileiros com o nome negativado no Serviço de Proteção ao Crédito (SPC).
-## Segundo os dados a falta de conhecimento não é o que impede o brasileiro de colocar a vida financeira em ordem.## E sim:## Disciplina para registrar os ganhos e gastos (26,3%), e falta de tempo (8,2%) *Dados SPC/CNDL,2020
+<p align="justify">61 milhões de brasileiros com o nome negativado no Serviço de Proteção ao Crédito (SPC).</p>
+ <p align="justify">Segundo os dados a falta de conhecimento não é o que impede o brasileiro de colocar a vida financeira em ordem.</p>
+ <p align="justify">E sim:</p>
+ <p align="justify">Disciplina para registrar os ganhos e gastos (26,3%), e falta de tempo (8,2%) *Dados SPC/CNDL,2020</p>
 
 ## Desenvolvemos a Melissa,uma inteligência artificial acoplada a uma assistente virtual a ser integrada ao Mercado Pago para pessoas que tem dificuldade em controlar sua vida financeira e atingir seus objetivos.​
 
